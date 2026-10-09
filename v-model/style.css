@@ -1,23 +1,23 @@
 :root{--g:#0c8450;--gd:#0a7345;--bg:#dcede3;--ink:#1a1a1a}
 *{box-sizing:border-box;margin:0}
-body{background:#fff;font-family:"Poppins","Segoe UI",Arial,sans-serif;color:var(--ink)}
+body{background:#fff;font-family:"Plus Jakarta Sans","Segoe UI",Arial,sans-serif;color:var(--ink)}
 .wrap{width:100%;overflow:hidden}
 .stage{position:relative;width:1322px;height:693px;transform-origin:0 0}
-.title{position:absolute;top:0;font-size:20px;font-weight:700;color:var(--g);white-space:nowrap}
+.title{position:absolute;top:0;font-size:20.3px;font-weight:700;letter-spacing:-.2px;color:var(--g);white-space:nowrap}
 .title.left{left:0}.title.right{right:20px;top:-2px}
 .curve{position:absolute;inset:0;width:100%;height:100%}
-.curve path{fill:none;stroke:var(--g);stroke-width:7;stroke-linecap:round}
+.curve path{fill:none;stroke:var(--g);stroke-width:6;stroke-linecap:round}
 .box{position:absolute;background:var(--bg);border:1px solid var(--g);border-radius:10px;
-  padding:12px 14px;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;
-  font-size:15px;font-weight:600;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+  padding:12px 14px 13px;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;
+  font-size:14.3px;font-weight:700;white-space:nowrap;transition:transform .2s,box-shadow .2s}
 .box:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(12,132,80,.25)}
 .box.r{align-items:flex-end;text-align:right}
 .pill{align-self:flex-start;background:var(--g);color:#fff;font-size:12px;font-weight:700;
-  padding:3px 10px;border-radius:12px;line-height:16px}
+  padding:0 10px;border-radius:12px;line-height:22px;height:22px}
 .box.r .pill{align-self:flex-end}
 .box.core{left:476px;top:600px;width:368px;height:92px;background:var(--g);color:#fff;
   align-items:center;text-align:center;justify-content:center;gap:4px}
-.box.core strong{font-size:21px}.box.core span{font-size:13px;font-weight:400;line-height:1.35}
+.box.core strong{font-size:21px;font-weight:700}.box.core span{font-size:13px;font-weight:400;line-height:1.35}
 .link{position:absolute;height:0;border-top:1.5px dashed #9aa5a0}
 .link span{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);background:#fff;
   border:1px solid #888;border-radius:14px;padding:3px 12px;font-size:13px;font-weight:500;

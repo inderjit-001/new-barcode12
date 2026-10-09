@@ -38,3 +38,14 @@ function fit() {
   wrap.style.height = 693 * s + "px";
 }
 addEventListener("resize", fit); fit();
+
+// smooth V curve through measured points (Catmull-Rom -> cubic Bezier)
+const lp = [[133,100],[135,122],[158,232],[205,345],[285,462],[410,565],[476,600],[500,610]];
+const rp = lp.slice().reverse().map(p => [1322 - p[0], p[1]]);
+const all = lp.concat(rp);
+let d = `M${all[0][0]} ${all[0][1]}`;
+for (let i = 0; i < all.length - 1; i++) {
+  const p0 = all[i-1] || all[i], p1 = all[i], p2 = all[i+1], p3 = all[i+2] || p2;
+  d += ` C${p1[0]+(p2[0]-p0[0])/6} ${p1[1]+(p2[1]-p0[1])/6} ${p2[0]-(p3[0]-p1[0])/6} ${p2[1]-(p3[1]-p1[1])/6} ${p2[0]} ${p2[1]}`;
+}
+document.getElementById("vpath").setAttribute("d", d);
