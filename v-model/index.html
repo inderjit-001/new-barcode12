@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>V-Model Diagram</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap" id="wrap">
+    <div class="stage" id="stage">
+      <h2 class="title left">Decomposition (Define &amp; Design)</h2>
+      <h2 class="title right">Integration &amp; Verification</h2>
+      <svg class="curve" viewBox="0 0 1322 693" aria-hidden="true">
+        <path d="M133 100 C 170 420, 290 540, 480 612 L 840 612 C 1030 540, 1150 420, 1190 100"/>
+      </svg>
+      <div id="links"></div>
+      <div id="boxes"></div>
+      <div class="box core">
+        <strong>Coding / Implementation</strong>
+        <span>DO-178C - Source &amp; Object Code<br>(turning point, not a test)</span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
